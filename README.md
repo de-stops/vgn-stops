@@ -1,6 +1,6 @@
 # vgn-stops
 
-This is a simple script to download all [VGN](http://www.vgn.de/) stops as [GTFS-compatible CSV](https://developers.google.com/transit/gtfs/reference/stops-file).
+This is a simple script to download all [VGN](https://www.vgn.de/) stops as [GTFS-compatible CSV](https://developers.google.com/transit/gtfs/reference/stops-file).
 
 The script uses the following endpoint:
 
