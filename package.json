@@ -1,0 +1,14 @@
+{
+	"name":         "vgn-stops",
+	"version":      "0.0.1",
+	"main":         "index.js",
+	"files":        ["index.js"],
+	"engines" :     {"node": ">=6"},
+	"dependencies": {
+		"jsonix": "^2.4.1",
+		"proj4": "^2.3.17",
+		"iconv-lite": "^0.4.15",
+		"json2csv": "^3.7",
+		"got": "^6.3"
+	}
+}
