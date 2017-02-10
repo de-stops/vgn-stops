@@ -95,6 +95,7 @@ got(url, {encoding: null}).then(response => {
 			var lonLat = proj4("+proj=tmerc +lat_0=0 +lon_0=12 +k=1 +x_0=4500000 +y_0=0 +datum=potsdam +units=m +no_defs", "EPSG:4326", {x: wpt.lon, y: wpt.lat})
 			return {
 				stop_id: wpt.efaId,
+				stop_code: wpt.desc,
 				stop_name: wpt.name,
 				stop_lon: lonLat.x,
 				stop_lat: lonLat.y,
@@ -104,5 +105,5 @@ got(url, {encoding: null}).then(response => {
 			var rs = leftPad((stop.stop_id.match(/^de:(\d+):/)||['', ''])[1], 5, '0');
 			return RS[rs];
 		});
-	process.stdout.write(json2csv({ data: stops, fields: ["stop_id", "stop_name", "stop_lon", "stop_lat"] }));
+	process.stdout.write(json2csv({ data: stops, fields: ["stop_id", "stop_name", "stop_lon", "stop_lat", "stop_code"] }));
 });
